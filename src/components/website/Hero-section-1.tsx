@@ -1,11 +1,12 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRight, ChevronRight, Mail, SendHorizonal } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import { TextEffect } from '@/components/ui/text-effect'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { HeroHeader } from "@/components/website/Header"
+import { EmailInput } from '@/components/ui/email-input'
 
 const transitionVariants = {
     item: {
@@ -28,6 +29,11 @@ const transitionVariants = {
 }
 
 export default function HeroSection() {
+    const handleEmailSubmit = (email: string) => {
+        // TODO: Handle form submission
+        console.log('Valid company email from Hero:', email)
+    }
+
     return (
         <>
             <HeroHeader />
@@ -94,43 +100,16 @@ export default function HeroSection() {
                                     Automated triage, response, and resolution.
                                 </TextEffect>
 
-                                {/* <TextEffect
-                                    preset="fade-in-blur"
-                                    speedSegment={0.3}
-                                    as="p"
-                                    className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                                    AI that actually works.
-                                </TextEffect> */}
-
                                 <AnimatedGroup
                                     preset="blur-slide"
                                     className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
-                                    <form
-                                    action=""
-                                    className="mx-auto max-w-sm">
-                                        <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-2xl pr-1 border shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
-                                            <Mail className="pointer-events-none absolute inset-y-0 left-4 my-auto size-4" />
-
-                                            <input
-                                                placeholder="Your mail address"
-                                                className="h-12 w-full bg-transparent pl-12 focus:outline-none"
-                                                type="email"
-                                            />
-
-                                            <div>
-                                                <Button
-                                                    aria-label="submit"
-                                                    size="lg"
-                                                    className="rounded-xl">
-                                                    <span className="hidden md:block">Get Started</span>
-                                                    <SendHorizonal
-                                                        className="relative mx-auto size-5 md:hidden"
-                                                        strokeWidth={2}
-                                                    />
-                                                </Button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    <EmailInput
+                                        onSubmit={handleEmailSubmit}
+                                        placeholder="Your mail address"
+                                        buttonText="Get Started"
+                                        size="lg"
+                                        showHelperText={false}
+                                    />
                                 </AnimatedGroup>
                             </div>
                         </div>
