@@ -1,6 +1,6 @@
 'use client'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { ChartBarIncreasingIcon, Database, Fingerprint, IdCard } from 'lucide-react'
+import { Atom, ChartBarIncreasingIcon, Database, Fingerprint, IdCard } from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
@@ -11,19 +11,19 @@ export default function Features3() {
 
     const images = {
         'item-1': {
-            image: '/charts.png',
+            image: '/images/dummy2.jpg',
             alt: 'Database visualization',
         },
         'item-2': {
-            image: '/music.png',
+            image: '/images/mountain.png',
             alt: 'Security authentication',
         },
         'item-3': {
-            image: '/mail2.png',
+            image: '/images/dummy.jpg',
             alt: 'Identity management',
         },
         'item-4': {
-            image: '/payments.png',
+            image: '/images/mountain.png',
             alt: 'Analytics dashboard',
         },
     }
@@ -33,8 +33,8 @@ export default function Features3() {
             <div className="bg-linear-to-b absolute inset-0 -z-10 sm:inset-6 sm:rounded-b-3xl dark:block dark:to-[color-mix(in_oklab,var(--color-zinc-900)_75%,var(--color-background))]"></div>
             <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-16 lg:space-y-20 dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)]">
                 <div className="relative z-10 mx-auto max-w-2xl space-y-6 text-center">
-                    <h2 className="text-balance text-4xl font-semibold lg:text-6xl">The foundation for AI</h2>
-                    <p>Lyra is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</p>
+                    <h2 className="text-balance text-4xl font-semibold lg:text-6xl">Intelligent 360 view</h2>
+                    <p>Warrn was built to stop tool hopping. Everything you need, nothing you don't.</p>
                 </div>
 
                 <div className="grid gap-12 sm:px-12 md:grid-cols-2 lg:gap-20 lg:px-0">
@@ -46,38 +46,38 @@ export default function Features3() {
                         <AccordionItem value="item-1">
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
-                                    <Database className="size-4" />
-                                    Database Visualization
+                                    <Atom className="size-4" />
+                                    Incident Response
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent>Lyra is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</AccordionContent>
+                            <AccordionContent>Agentic incident triage and response that reduces MTTR from hours to minutes.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
                                     <Fingerprint className="size-4" />
-                                    Advanced Authentication
+                                    Observability
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent>Lyra is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</AccordionContent>
+                            <AccordionContent>Observability (logs, metrics, traces) to help you understand exactly what's happening.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-3">
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
                                     <IdCard className="size-4" />
-                                    Identity Management
+                                    Status Page
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent>Lyra is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</AccordionContent>
+                            <AccordionContent>Keep your customers informed.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-4">
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
                                     <ChartBarIncreasingIcon className="size-4" />
-                                    Analytics Dashboard
+                                    Heartbeats
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent>Lyra is evolving to be more than just the models. It supports an entire to the APIs and platforms helping developers and businesses innovate.</AccordionContent>
+                            <AccordionContent>Monitor your services with heartbeats.</AccordionContent>
                         </AccordionItem>
                     </Accordion>
 

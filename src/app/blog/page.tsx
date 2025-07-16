@@ -25,7 +25,7 @@ export default async function BlogPage() {
       <HeroHeader />
       
       <div className="pt-20">
-        <div className="container mx-auto px-4 py-16">
+        <div className="container mx-auto px-4 py-32">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="mx-auto max-w-xl space-y-6 text-center mb-20">

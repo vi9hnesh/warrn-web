@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import { Brain, Shield, Zap } from 'lucide-react'
+import { Brain, Shield, Zap, Activity, Globe } from 'lucide-react'
 import { ReactNode } from 'react'
 
 export default function Features() {
@@ -7,11 +7,13 @@ export default function Features() {
         <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
             <div className="@container mx-auto max-w-5xl px-6">
                 <div className="text-center">
-                    <h2 className="text-balance text-4xl font-semibold lg:text-5xl">Built for modern incident response</h2>
-                    <p className="mt-4">AI-powered tools that eliminate alert fatigue and reduce mean time to resolution.</p>
+                    {/* <h2 className="text-balance text-4xl font-semibold lg:text-5xl">Stop paying for tools that don't work</h2> */}
+                    <h2 className="text-balance text-4xl font-semibold lg:text-5xl">Built Like It's 2025, Not 2009</h2>
+                    {/* <p className="mt-4">AI-powered tools that eliminate alert fatigue and reduce mean time to resolution.</p> */}
+                    <p className="mt-4">Observe, Respond, Resolve. Incident Management Without the Drama</p>
                 </div>
                 <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16">
-                    <Card className="group shadow-zinc-950/5">
+                    <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
                         <CardHeader className="pb-3">
                             <CardDecorator>
                                 <Zap
@@ -20,45 +22,45 @@ export default function Features() {
                                 />
                             </CardDecorator>
 
-                            <h3 className="mt-6 font-medium">Lightning Fast Response</h3>
+                            <h3 className="mt-6 font-medium">Incident Response</h3>
                         </CardHeader>
 
                         <CardContent>
-                            <p className="text-sm">Automated incident triage and response that reduces MTTR from hours to minutes.</p>
+                            <p className="text-sm">From chaos to clarity in seconds. AI-powered triage that turns incidents into non-events.</p>
                         </CardContent>
                     </Card>
 
-                    <Card className="group shadow-zinc-950/5">
+                    <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
                         <CardHeader className="pb-3">
                             <CardDecorator>
-                                <Shield
+                                <Activity
                                     className="size-6"
                                     aria-hidden
                                 />
                             </CardDecorator>
 
-                            <h3 className="mt-6 font-medium">Enterprise Security</h3>
+                            <h3 className="mt-6 font-medium">Observability</h3>
                         </CardHeader>
 
                         <CardContent>
-                            <p className="mt-3 text-sm">Multi-tenant architecture with SOC 2 compliance, role-based access controls, and audit logging.</p>
+                            <p className="mt-3 text-sm">See everything, miss nothing. Complete visibility across your entire stack in one beautiful dashboard.</p>
                         </CardContent>
                     </Card>
 
-                    <Card className="group shadow-zinc-950/5">
+                    <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
                         <CardHeader className="pb-3">
                             <CardDecorator>
-                                <Brain
+                                <Globe
                                     className="size-6"
                                     aria-hidden
                                 />
                             </CardDecorator>
 
-                            <h3 className="mt-6 font-medium">AI That Actually Works</h3>
+                            <h3 className="mt-6 font-medium">Status Page</h3>
                         </CardHeader>
 
                         <CardContent>
-                            <p className="mt-3 text-sm">Machine learning models trained on real incident data for intelligent alert parsing and anomaly detection.</p>
+                            <p className="mt-3 text-sm">Trust through transparency. Keep customers happy with real-time updates they actually want to read.</p>
                         </CardContent>
                     </Card>
                 </div>

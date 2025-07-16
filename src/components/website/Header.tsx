@@ -19,7 +19,6 @@ const menuItems = [
     { name: 'Features', href: '/features' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
-    { name: 'Labs', href: '/labs' },
     { name: 'Blog', href: '/blog' },
 ]
 
@@ -53,8 +52,8 @@ export const HeroHeader = () => {
                 className="fixed z-20 w-full px-2">
                 <div className={cn('mx-auto mt-5 max-w-7xl px-2 transition-all rounded-2xl duration-300', isScrolled && 'bg-background/50 max-w-[90%] border backdrop-blur-lg')}>
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-2">
-                        <div className="flex w-full justify-between lg:w-auto">
-                            <Link href="/" className="flex items-center space-x-2 ms-2">
+                        <div className="flex w-full justify-between lg:w-auto mx-3">
+                            <Link href="/" className="flex items-center space-x-2">
                                 <div className="h-8 w-8 m-0 flex items-center justify-center">
                                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                         width="24px" height="24px" viewBox="0 0 300.000000 300.000000"

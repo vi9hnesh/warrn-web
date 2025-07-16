@@ -81,7 +81,7 @@ export default function HeroSection() {
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="h1"
-                                    className="mt-8 text-balance text-6xl font-semibold md:text-7xl lg:mt-16 xl:text-8xl">
+                                    className="mt-8 text-balance text-5xl md:text-7xl lg:mt-16 xl:text-8xl">
                                     Agentic Incident Response Platform
                                 </TextEffect>
                                 <TextEffect
@@ -91,8 +91,16 @@ export default function HeroSection() {
                                     delay={0.5}
                                     as="p"
                                     className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                                    Automated triage, response, and resolution. AI that actually works. 
+                                    Automated triage, response, and resolution.
                                 </TextEffect>
+
+                                {/* <TextEffect
+                                    preset="fade-in-blur"
+                                    speedSegment={0.3}
+                                    as="p"
+                                    className="mx-auto mt-8 max-w-2xl text-balance text-lg">
+                                    AI that actually works.
+                                </TextEffect> */}
 
                                 <AnimatedGroup
                                     preset="blur-slide"
@@ -134,16 +142,20 @@ export default function HeroSection() {
                                     className="bg-linear-to-b to-background absolute inset-0 z-10 from-transparent from-35%"
                                 />
                                 <div className="inset-shadow-2xs ring-background dark:inset-shadow-white/20 bg-background relative mx-auto max-w-6xl overflow-hidden rounded-2xl border p-4 shadow-lg shadow-zinc-950/15 ring-1">
-                                    <div className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block border border-border/20">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-muted/20 to-muted/5 rounded-2xl flex items-center justify-center">
-                                            <div className="text-muted-foreground text-sm">Warrn Dashboard Preview</div>
-                                        </div>
-                                    </div>
-                                    <div className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden bg-background">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-muted/20 to-muted/5 rounded-2xl flex items-center justify-center">
-                                            <div className="text-muted-foreground text-sm">Warrn Dashboard Preview</div>
-                                        </div>
-                                    </div>
+                                    <Image
+                                        className="bg-background aspect-15/8 relative hidden rounded-2xl dark:block"
+                                        src="/images/dummy2.jpg"
+                                        alt="app screen"
+                                        width="2700"
+                                        height="1440"
+                                    />
+                                    <Image
+                                        className="z-2 border-border/25 aspect-15/8 relative rounded-2xl border dark:hidden"
+                                        src="/images/dummy2.jpg"
+                                        alt="app screen"
+                                        width="2700"
+                                        height="1440"
+                                    />
                                 </div>
                             </div>
                         </AnimatedGroup>

@@ -1,6 +1,6 @@
 'use client';
 import { cn } from '@/lib/utils';
-import { motion, Transition } from 'framer-motion';
+import { motion, Transition, TargetAndTransition } from 'framer-motion';
 
 export type GlowEffectProps = {
   className?: string;
@@ -37,13 +37,13 @@ export function GlowEffect({
   scale = 1,
   duration = 5,
 }: GlowEffectProps) {
-  const BASE_TRANSITION = {
+  const BASE_TRANSITION: Transition = {
     repeat: Infinity,
     duration: duration,
-    ease: 'linear',
+    ease: 'linear' as const,
   };
 
-  const animations = {
+  const animations: Record<string, TargetAndTransition> = {
     rotate: {
       background: [
         `conic-gradient(from 0deg at 50% 50%, ${colors.join(', ')})`,
@@ -63,7 +63,7 @@ export function GlowEffect({
       transition: {
         ...(transition ?? {
           ...BASE_TRANSITION,
-          repeatType: 'mirror',
+          repeatType: 'mirror' as const,
         }),
       },
     },
@@ -78,7 +78,7 @@ export function GlowEffect({
       transition: {
         ...(transition ?? {
           ...BASE_TRANSITION,
-          repeatType: 'mirror',
+          repeatType: 'mirror' as const,
         }),
       },
     },
@@ -90,7 +90,7 @@ export function GlowEffect({
       transition: {
         ...(transition ?? {
           ...BASE_TRANSITION,
-          repeatType: 'mirror',
+          repeatType: 'mirror' as const,
         }),
       },
     },
@@ -102,7 +102,7 @@ export function GlowEffect({
       transition: {
         ...(transition ?? {
           ...BASE_TRANSITION,
-          repeatType: 'mirror',
+          repeatType: 'mirror' as const,
         }),
       },
     },

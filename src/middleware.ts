@@ -7,11 +7,8 @@ export function middleware(request: NextRequest) {
   const isAuthPage = request.nextUrl.pathname.startsWith('/login') || 
                     request.nextUrl.pathname.startsWith('/register')
   
-  // Public routes that don't require authentication
-  const isPublicRoute = request.nextUrl.pathname === '/' ||
-                       request.nextUrl.pathname.startsWith('/blog') ||
-                       request.nextUrl.pathname.startsWith('/api/') ||
-                       isAuthPage
+  // Protected routes that require authentication (only /secure for now)
+  const isProtectedRoute = request.nextUrl.pathname.startsWith('/secure')
 
   // If trying to access auth page while logged in, redirect to dashboard
   if (isAuthPage && authTokens) {
@@ -19,7 +16,7 @@ export function middleware(request: NextRequest) {
   }
 
   // If trying to access protected route while logged out, redirect to login
-  if (!isPublicRoute && !authTokens) {
+  if (isProtectedRoute && !authTokens) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
 
