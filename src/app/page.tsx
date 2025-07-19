@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import HeroSection from "@/components/website/HeroSection";
@@ -13,6 +14,25 @@ import Features from "@/components/features-1";
 import FeaturesSection2 from "@/components/features-2";
 import Features3 from "@/components/features-3";
 import Footer from "@/components/website/Footer";
+import { generateMetadata as generateSEOMetadata, SITE_CONFIG } from "@/lib/seo";
+
+export const metadata: Metadata = generateSEOMetadata({
+  title: "AI-Powered Incident Management Platform",
+  description: "Transform your incident response with Warrn's AI-powered platform. Intelligent triage, automated workflows, and continuous learning for modern DevOps teams. Reduce downtime by 70% with smart incident management.",
+  keywords: [
+    ...SITE_CONFIG.keywords,
+    "incident response platform",
+    "DevOps automation",
+    "AI monitoring",
+    "reduce downtime",
+    "intelligent alerting",
+    "automated triage",
+    "SRE platform",
+    "multi-tenant incident management"
+  ],
+  canonicalUrl: SITE_CONFIG.url,
+  type: 'website'
+});
 
 // Loading skeletons for each section
 const FeaturesSkeleton = () => (

@@ -29,6 +29,8 @@ import {
 } from '@/components/ui/table'
 import { HeroHeader } from '@/components/website/Header'
 import CTA from '@/components/website/CTA'
+import { generateBlogPostMetadata, generateBlogPostStructuredData, generateBreadcrumbStructuredData } from '@/lib/seo'
+import { StructuredData } from '@/components/seo/StructuredData'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -175,21 +177,27 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   if (!post) {
     return {
       title: 'Post Not Found | Warrn Blog',
+      robots: {
+        index: false,
+        follow: false,
+      },
     }
   }
 
-  return {
-    title: `${post.title} | Warrn Blog`,
-    description: post.excerpt,
-    openGraph: {
-      title: post.title,
-      description: post.excerpt,
-      type: 'article',
-      publishedTime: post.date,
-      authors: post.author ? [post.author] : undefined,
-      tags: post.tags,
-    },
+  // Convert post data to SEO format
+  const blogPostSEO = {
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    readTime: post.readTime,
+    publishedTime: new Date(post.date).toISOString(),
+    author: post.author,
+    tags: post.tags,
+    featuredImage: post.featuredImage,
+    featuredImageAlt: post.featuredImageAlt,
   }
+
+  return generateBlogPostMetadata(blogPostSEO)
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
@@ -205,8 +213,32 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const headings = allHeadings.filter(heading => heading.level === 2)
   const showTOC = headings.length >= 2
 
+  // Generate structured data
+  const blogPostSEO = {
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    readTime: post.readTime,
+    publishedTime: new Date(post.date).toISOString(),
+    author: post.author,
+    tags: post.tags,
+    featuredImage: post.featuredImage,
+    featuredImageAlt: post.featuredImageAlt,
+  }
+
+  const structuredData = [
+    generateBlogPostStructuredData(blogPostSEO),
+    generateBreadcrumbStructuredData([
+      { name: 'Home', url: '/' },
+      { name: 'Blog', url: '/blog' },
+      { name: post.title, url: `/blog/${post.slug}` },
+    ]),
+  ]
+
   return (
-    <div className="flex flex-col min-h-screen bg-background text-foreground">
+    <>
+      <StructuredData data={structuredData} />
+      <div className="flex flex-col min-h-screen bg-background text-foreground">
       {/* <ScrollHeader /> */}
       <HeroHeader />
       
@@ -506,5 +538,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <CTA />
       <Footer />
     </div>
+    </>
   )
 } 

@@ -10,11 +10,29 @@ import Footer from '@/components/website/Footer'
 import { ArrowLeft, Clock, Calendar } from 'lucide-react'
 import { HeroHeader } from '@/components/website/Header'
 import CTA from '@/components/website/CTA'
+import { generateMetadata as generateSEOMetadata, SITE_CONFIG } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Blog | Warrn - Incident Management Insights',
-  description: 'Latest insights, best practices, and updates from the Warrn team on incident management, DevOps, and reliability engineering.',
-}
+export const metadata: Metadata = generateSEOMetadata({
+  title: 'Blog - Incident Management Insights & Best Practices',
+  description: 'Expert insights on incident management, AI-powered monitoring, DevOps best practices, and system reliability engineering. Learn from the Warrn team about modern incident response strategies and automation.',
+  keywords: [
+    ...SITE_CONFIG.keywords,
+    'incident management blog',
+    'DevOps best practices',
+    'system reliability articles',
+    'AI monitoring insights',
+    'incident response tutorials',
+    'SRE best practices',
+    'monitoring and alerting',
+    'automated incident response',
+    'DevOps culture',
+    'site reliability engineering blog',
+    'incident management tips',
+    'system monitoring guides'
+  ],
+  canonicalUrl: `${SITE_CONFIG.url}/blog`,
+  type: 'website'
+});
 
 export default async function BlogPage() {
   const posts = await getAllPosts()
