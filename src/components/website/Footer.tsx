@@ -1,6 +1,7 @@
 import { Logo } from '@/components/logo'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import { ExternalLink, MoveUpRight } from 'lucide-react'
 
 const links = [
     {
@@ -21,7 +22,7 @@ const links = [
         items: [
             {
                 title: 'Docs',
-                href: '/docs',
+                href: 'https://docs.warrn.io',
             },
             {
                 title: 'Blog',
@@ -33,7 +34,7 @@ const links = [
         group: 'Company',
         items: [
             {
-                title: 'Emphoni',
+                title: 'emphoni',
                 href: 'https://emphoni.com',
             },
             {
@@ -53,17 +54,18 @@ const links = [
                 title: 'Privacy',
                 href: '/privacy',
             },
-            {
-                title: 'Security',
-                href: '/security',
-            },
         ],
     },
 ]
 
+// Helper function to check if a link is external
+const isExternalLink = (href: string) => {
+    return href.startsWith('http://') || href.startsWith('https://')
+}
+
 export default function Footer() {
     return (
-        <footer className="border-b bg-white pt-20 dark:bg-transparent">
+        <footer className=" bg-background py-16 dark:bg-transparent">
             <div className="mx-auto max-w-5xl px-6">
                 <div className="grid gap-12 md:grid-cols-5">
                     <div className="md:col-span-2">
@@ -92,6 +94,9 @@ export default function Footer() {
                             </div>
                             <span className="font-bold font-mono text-2xl tracking-tight text-foreground">Warrn</span>
                         </Link>
+                        <div className="mt-12 flex flex-wrap items-end justify-between gap-6 py-6">
+                            <span className="text-muted-foreground order-last block text-center text-sm md:order-first">© {new Date().getFullYear()} Warrn, Made by <a href="https://emphoni.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-foreground/80 inline-flex items-center gap-1 group">emphoni<MoveUpRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" /></a></span>
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 md:col-span-3">
@@ -100,20 +105,35 @@ export default function Footer() {
                                 key={index}
                                 className="space-y-4 text-sm">
                                 <span className="block font-medium">{link.group}</span>
-                                {link.items.map((item, index) => (
-                                    <Link
-                                        key={index}
-                                        href={item.href}
-                                        className="text-muted-foreground hover:text-accent-foreground block duration-150">
-                                        <span>{item.title}</span>
-                                    </Link>
-                                ))}
+                                {link.items.map((item, index) => {
+                                    const isExternal = isExternalLink(item.href)
+                                    
+                                    if (isExternal) {
+                                        return (
+                                            <a
+                                                key={index}
+                                                href={item.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-muted-foreground hover:text-accent-foreground flex items-center gap-1 duration-150 group">
+                                                <span>{item.title}</span>
+                                                <MoveUpRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+                                            </a>
+                                        )
+                                    }
+                                    
+                                    return (
+                                        <Link
+                                            key={index}
+                                            href={item.href}
+                                            className="text-muted-foreground hover:text-accent-foreground block duration-150">
+                                            <span>{item.title}</span>
+                                        </Link>
+                                    )
+                                })}
                             </div>
                         ))}
                     </div>
-                </div>
-                <div className="mt-12 flex flex-wrap items-end justify-between gap-6 border-t py-6">
-                    <span className="text-muted-foreground order-last block text-center text-sm md:order-first">© {new Date().getFullYear()} Warrn, All rights reserved</span>
                 </div>
             </div>
         </footer>

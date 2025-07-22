@@ -9,39 +9,51 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages = [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: new Date('2025-07-21'),
       changeFrequency: 'weekly' as const,
       priority: 1,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      lastModified: new Date('2025-07-21'),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/features`,
-      lastModified: new Date(),
+      lastModified: new Date('2025-07-21'),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/pricing`,
-      lastModified: new Date(),
+      lastModified: new Date('2025-07-21'),
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: new Date('2025-07-21'),
       changeFrequency: 'daily' as const,
       priority: 0.8,
     },
     {
       url: `${baseUrl}/labs`,
-      lastModified: new Date(),
+      lastModified: new Date('2025-07-21'),
       changeFrequency: 'monthly' as const,
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: new Date('2025-07-21'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date('2025-07-21'),
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
     },
   ]
 

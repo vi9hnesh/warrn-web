@@ -1,0 +1,12 @@
+<svg width="120" height="60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@700');
+    .text {
+      font-family: 'Geist Mono', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      fill: #000;
+    }
+  </style>
+  <text x="0" y="45" class="text">Warrn</text>
+</svg>

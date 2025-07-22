@@ -50,7 +50,7 @@ export const HeroHeader = () => {
             <nav
                 data-state={menuState && 'active'}
                 className="fixed z-20 w-full px-2">
-                <div className={cn('mx-auto mt-5 max-w-7xl px-2 transition-all rounded-2xl duration-300', isScrolled && 'bg-background/50 max-w-[90%] border backdrop-blur-lg')}>
+                <div className={cn('mx-auto mt-5 max-w-7xl px-2 transition-all rounded-2xl duration-300', isScrolled && 'bg-background/80 max-w-[90%] border backdrop-blur-lg')}>
                     <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-2">
                         <div className="flex w-full justify-between lg:w-auto mx-3">
                             <Link href="/" className="flex items-center space-x-2">
