@@ -1,15 +1,8 @@
 import { Metadata } from "next";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import HeroSection from "@/components/website/HeroSection";
-import HeroSection1 from "@/components/website/Hero-section-1";
-import FeaturesSection from "@/components/website/Features";
-import HowItWorks from "@/components/website/HowItWorks";
-import Pricing from "@/components/website/Pricing";
+import PremiumHero from "@/components/website/PremiumHero";
 import CTASection from "@/components/website/CTA";
-import Image from "next/image";
 import { Suspense } from "react";
-import ScrollHeader from "@/components/website/ScrollHeader";
+import MultiCardFeature from "@/components/multi-card-feature";
 import Features from "@/components/features-1";
 import FeaturesSection2 from "@/components/features-2";
 import Features3 from "@/components/features-3";
@@ -64,13 +57,16 @@ export default function Home() {
       
       {/* Reduced padding since floating navbar takes less space */}
       <div>
-        {/* <HeroSection /> */}
-        <HeroSection1 />
+        <PremiumHero />
+        <MultiCardFeature />
+        {/* <Suspense fallback={<SectionSkeleton />}>
+          <PremiumGallery />
+        </Suspense> */}
         <Suspense fallback={<FeaturesSkeleton />}>
           <div id="features">
               {/* <FeaturesSection /> */}
-              <FeaturesSection2 />
               <Features />
+              <FeaturesSection2 />
               <Features3 />
             </div>
         </Suspense>

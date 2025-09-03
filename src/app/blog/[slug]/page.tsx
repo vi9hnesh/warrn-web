@@ -286,14 +286,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {/* Featured Image */}
               {post.featuredImage && (
                 <div className="relative mb-12 overflow-hidden rounded-lg border bg-muted">
-                  <Image
-                    src={post.featuredImage.startsWith('/') ? post.featuredImage : `/images/blog/${post.featuredImage}`}
-                    alt={post.featuredImageAlt || post.title}
-                    width={1200}
-                    height={600}
-                    className="w-full h-auto object-cover"
-                    priority
-                  />
+                  {post.featuredImage.endsWith('.mp4') ? (
+                    <video
+                      src={post.featuredImage.startsWith('/') ? post.featuredImage : `/images/blog/${post.featuredImage}`}
+                      autoPlay
+                      
+                      muted
+                      playsInline
+                      className="w-full h-auto object-cover max-h-128"
+                    />
+                  ) : (
+                    <Image
+                      src={post.featuredImage.startsWith('/') ? post.featuredImage : `/images/blog/${post.featuredImage}`}
+                      alt={post.featuredImageAlt || post.title}
+                      width={1200}
+                      height={600}
+                      className="w-full h-auto object-cover max-h-128"
+                      priority
+                    />
+                  )}
                 </div>
               )}
 
@@ -302,11 +313,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <div className="flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
                   {post.author && (
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                      {/* <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
                         <span className="text-xs font-medium text-primary">
                           {post.author.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}
                         </span>
-                      </div>
+                      </div> */}
                       <div className="font-medium text-foreground">
                         {post.author}
                       </div>
@@ -500,7 +511,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                             alt={alt || ''}
                             width={800}
                             height={400}
-                            className="w-full h-auto object-cover rounded-lg border bg-muted"
+                            className="w-full h-auto max-h-128 object-cover rounded-lg border bg-muted"
                           />
                           {(alt || title) && (
                             <span className="block mt-3 text-sm text-muted-foreground italic">

@@ -4,11 +4,11 @@ import { ReactNode } from 'react'
 
 export default function Features() {
     return (
-        <section className="bg-zinc-50 py-16 md:py-32 dark:bg-transparent">
+        <section className="bg-[#F6F6F6] py-16 md:py-32 dark:bg-transparent m-22 mt-28 border-none rounded-3xl">
             <div className="@container mx-auto max-w-5xl px-6">
                 <div className="text-center">
                     {/* <h2 className="text-balance text-4xl font-semibold lg:text-5xl">Stop paying for tools that don't work</h2> */}
-                    <h2 className="text-balance text-4xl font-semibold lg:text-5xl">Built Like It's 2025, Not 2009</h2>
+                    <h2 className="text-balance text-4xl lg:text-5xl">Built Like It's 2025, Not 2009</h2>
                     {/* <p className="mt-4">AI-powered tools that eliminate alert fatigue and reduce mean time to resolution.</p> */}
                     <p className="mt-4">Observe, Respond, Resolve. Incident Management Without the Drama</p>
                 </div>
