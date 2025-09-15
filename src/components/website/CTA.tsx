@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { EmailInput } from '@/components/ui/email-input';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 const CTASection: React.FC = () => {
   const handleEmailSubmit = (email: string) => {
@@ -21,13 +23,22 @@ const CTASection: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <div className='relative'>
-              <EmailInput
+              {/* <EmailInput
                 onSubmit={handleEmailSubmit}
                 placeholder="Your mail address"
                 buttonText="Get Started"
                 size="md"
                 showHelperText={false}
-              />
+              /> */}
+
+                <Button
+                    asChild
+                    size="lg"
+                    className='bg-white text-black hover:bg-gray-200 lg:inline-flex  rounded-2xl'>
+                    <Link href="https://app.warrn.io/sign-up">
+                        <span>Start Now, It's Free</span>
+                    </Link>
+                </Button>
             </div>
           </div>
         </div>

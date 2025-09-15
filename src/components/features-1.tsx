@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import { Brain, Shield, Zap, Activity, Globe } from 'lucide-react'
+import { AlertTriangle, Users, Settings2, MessageSquare } from 'lucide-react'
 import { ReactNode } from 'react'
 
 export default function Features() {
@@ -7,62 +7,85 @@ export default function Features() {
         <section className="bg-[#F6F6F6] py-16 md:py-32 dark:bg-transparent m-22 mt-28 border-none rounded-3xl">
             <div className="@container mx-auto max-w-5xl px-6">
                 <div className="text-center">
-                    {/* <h2 className="text-balance text-4xl font-semibold lg:text-5xl">Stop paying for tools that don't work</h2> */}
-                    <h2 className="text-balance text-4xl lg:text-5xl">Built Like It's 2025, Not 2009</h2>
-                    {/* <p className="mt-4">AI-powered tools that eliminate alert fatigue and reduce mean time to resolution.</p> */}
-                    <p className="mt-4">Observe, Respond, Resolve. Incident Management Without the Drama</p>
+                    <h2 className="text-balance text-4xl lg:text-5xl">Production-Ready Alert Management</h2>
+                    <p className="mt-4">Complete alert lifecycle management with advanced team organization and collaboration.</p>
                 </div>
-                <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-sm gap-6 *:text-center md:mt-16">
+                <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-2xl gap-6 *:text-center md:mt-16">
                     <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
                         <CardHeader className="pb-3">
                             <CardDecorator>
-                                <Zap
+                                <AlertTriangle
                                     className="size-6"
                                     aria-hidden
                                 />
                             </CardDecorator>
 
-                            <h3 className="mt-6 font-medium">Incident Response</h3>
+                            <h3 className="mt-6 font-medium">Comprehensive Alert Management</h3>
                         </CardHeader>
 
                         <CardContent>
-                            <p className="text-sm">From chaos to clarity in seconds. AI-powered triage that turns incidents into non-events.</p>
+                            <p className="text-sm">Create, acknowledge, resolve with status tracking.</p>
                         </CardContent>
                     </Card>
 
                     <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
                         <CardHeader className="pb-3">
                             <CardDecorator>
-                                <Activity
+                                <Users
                                     className="size-6"
                                     aria-hidden
                                 />
                             </CardDecorator>
 
-                            <h3 className="mt-6 font-medium">Observability</h3>
+                            <h3 className="mt-6 font-medium">Team & Service Organization</h3>
                         </CardHeader>
 
                         <CardContent>
-                            <p className="mt-3 text-sm">See everything, miss nothing. Complete visibility across your entire stack in one beautiful dashboard.</p>
+                            <p className="mt-3 text-sm">Team management with service catalog to track ownership and responsibility mapping.</p>
                         </CardContent>
                     </Card>
 
                     <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
                         <CardHeader className="pb-3">
                             <CardDecorator>
-                                <Globe
+                                <Settings2
                                     className="size-6"
                                     aria-hidden
                                 />
                             </CardDecorator>
 
-                            <h3 className="mt-6 font-medium">Status Page</h3>
+                            <h3 className="mt-6 font-medium">Service Configuration</h3>
                         </CardHeader>
 
                         <CardContent>
-                            <p className="mt-3 text-sm">Trust through transparency. Keep customers happy with real-time updates they actually want to read.</p>
+                            <p className="mt-3 text-sm">Track your complete technical stack in one organized inventory.</p>
                         </CardContent>
                     </Card>
+
+                    {/* <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
+                        <CardHeader className="pb-3">
+                            <CardDecorator>
+                                <MessageSquare
+                                    className="size-6"
+                                    aria-hidden
+                                />
+                            </CardDecorator>
+
+                            <h3 className="mt-6 font-medium">Team Collaboration</h3>
+                        </CardHeader>
+
+                        <CardContent>
+                            <p className="mt-3 text-sm">Rich comments and discussions on alerts. Foster team collaboration and knowledge sharing during incident response.</p>
+                        </CardContent>
+                    </Card> */}
+                </div>
+                
+                {/* Future features preview */}
+                <div className="mt-16 text-center">
+                    <p className="text-sm text-muted-foreground">
+                        <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
+                        In Development: Agentic Response, Status Pages, Heartbeats, Observability & More
+                    </p>
                 </div>
             </div>
         </section>

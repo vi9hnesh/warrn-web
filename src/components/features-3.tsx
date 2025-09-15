@@ -6,26 +6,27 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 
 export default function Features3() {
-    type ImageKey = 'item-1' | 'item-2' | 'item-3' | 'item-4'
+    type ImageKey = 'item-1' | 'item-2'
     const [activeItem, setActiveItem] = useState<ImageKey>('item-1')
 
     const images = {
         'item-1': {
             image: '/images/dummy2.jpg',
-            alt: 'Database visualization',
+            alt: 'Alert management dashboard',
         },
         'item-2': {
             image: '/images/mountain.png',
-            alt: 'Security authentication',
+            alt: 'Team organization interface',
         },
-        'item-3': {
-            image: '/images/dummy.jpg',
-            alt: 'Identity management',
-        },
-        'item-4': {
-            image: '/images/mountain.png',
-            alt: 'Analytics dashboard',
-        },
+        // Commented out for future features
+        // 'item-3': {
+        //     image: '/images/dummy.jpg',
+        //     alt: 'Identity management',
+        // },
+        // 'item-4': {
+        //     image: '/images/mountain.png',
+        //     alt: 'Analytics dashboard',
+        // },
     }
 
     return (
@@ -33,8 +34,8 @@ export default function Features3() {
             <div className="bg-linear-to-b absolute inset-0 -z-10 sm:inset-6 sm:rounded-b-3xl dark:block dark:to-[color-mix(in_oklab,var(--color-zinc-900)_75%,var(--color-background))]"></div>
             <div className="mx-22 space-y-8 px-6 md:space-y-16 lg:space-y-20 dark:[--color-border:color-mix(in_oklab,var(--color-white)_10%,transparent)]">
                 <div className="relative z-10 mx-auto max-w-2xl space-y-6 text-center">
-                    <h2 className="text-balance text-4xl lg:text-6xl">Intelligent 360 view</h2>
-                    <p>Warrn was built to stop tool hopping. Everything you need, nothing you don't.</p>
+                    <h2 className="text-balance text-4xl lg:text-6xl">Foundation for Growth</h2>
+                    <p>Start with essential alert management. Scale with advanced features as they're ready.</p>
                 </div>
 
                 <div className="grid gap-12 sm:px-12 md:grid-cols-2 lg:gap-20 lg:px-0">
@@ -47,21 +48,21 @@ export default function Features3() {
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
                                     <Atom className="size-4" />
-                                    Incident Response
+                                    Alert Management
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent>Agentic incident triage and response that reduces MTTR from hours to minutes.</AccordionContent>
+                            <AccordionContent>Complete alert lifecycle with advanced filtering, metadata, and resolution tracking.</AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
                                     <Fingerprint className="size-4" />
-                                    Observability
+                                    Team Organization
                                 </div>
                             </AccordionTrigger>
-                            <AccordionContent>Observability (logs, metrics, traces) to help you understand exactly what's happening.</AccordionContent>
+                            <AccordionContent>Complete team and service catalog management with clear ownership mapping.</AccordionContent>
                         </AccordionItem>
-                        <AccordionItem value="item-3">
+                        {/* <AccordionItem value="item-3">
                             <AccordionTrigger>
                                 <div className="flex items-center gap-2 text-base">
                                     <IdCard className="size-4" />
@@ -78,7 +79,7 @@ export default function Features3() {
                                 </div>
                             </AccordionTrigger>
                             <AccordionContent>Monitor your services with heartbeats.</AccordionContent>
-                        </AccordionItem>
+                        </AccordionItem> */}
                     </Accordion>
 
                     <div className="bg-background relative flex overflow-hidden rounded-3xl border p-2">

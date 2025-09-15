@@ -4,19 +4,19 @@ import { cn } from '@/lib/utils'
 import { ExternalLink, MoveUpRight } from 'lucide-react'
 
 const links = [
-    {
-        group: 'Product',
-        items: [
-            {
-                title: 'Features',
-                href: '/features',
-            },
-            {
-                title: 'Pricing',
-                href: '/pricing',
-            },
-        ],
-    },
+    // {
+    //     group: 'Product',
+    //     items: [
+    //         {
+    //             title: 'Features',
+    //             href: '/features',
+    //         },
+    //         {
+    //             title: 'Pricing',
+    //             href: '/pricing',
+    //         },
+    //     ],
+    // },
     {
         group: 'Resources',
         items: [
@@ -24,10 +24,10 @@ const links = [
                 title: 'Docs',
                 href: 'https://docs.warrn.io',
             },
-            {
-                title: 'Blog',
-                href: '/blog',
-            },
+            // {
+            //     title: 'Blog',
+            //     href: '/blog',
+            // },
         ],
     },
     {
@@ -94,9 +94,9 @@ export default function Footer() {
                             </div>
                             <span className="font-bold font-mono text-2xl tracking-tight text-foreground">Warrn</span>
                         </Link>
-                        <div className="mt-12 flex flex-wrap items-end justify-between gap-6 py-6">
+                        {/* <div className="mt-12 flex flex-wrap items-end justify-between gap-6 py-6">
                             <span className="text-muted-foreground order-last block text-center text-sm md:order-first">© {new Date().getFullYear()} Warrn, Made by <a href="https://emphoni.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-foreground/80 inline-flex items-center gap-1 group">emphoni<MoveUpRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" /></a></span>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 md:col-span-3">

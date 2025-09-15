@@ -14,20 +14,20 @@ export default function FeaturesSection2() {
                         <ul className="mt-8 divide-y border-y *:flex *:items-center *:gap-3 *:py-3">
                             <li>
                                 <Atom className="size-5" />
-                                Agentic incident response
+                                Comprehensive alert management
                             </li>
                             <li>
                                 <Activity className="size-5" />
-                                Observability (logs, metrics, traces)
+                                Team & service organization
                             </li>
-                            <li>
+                            {/* <li>
                                 <Zap className="size-5" />
                                 Status page
                             </li>
                             <li>
                                 <DraftingCompass className="size-5" />
                                 Heartbeats
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                     <div className="border-border/50 relative rounded-3xl border p-3 lg:col-span-3 max-h-[400px]">

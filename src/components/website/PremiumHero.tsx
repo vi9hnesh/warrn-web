@@ -39,12 +39,18 @@ export default function PremiumHero() {
 
         <div className="relative mx-auto max-w-7xl px-6 pt-14">
           <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
+            {/* Early Access Badge */}
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
+                <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse mr-2"></span>
+                Early Access
+              </div>
             <TextEffect
               preset="fade-in-blur"
               speedSegment={0.3}
               as="h1"
               className="mt-8 text-balance text-5xl md:text-7xl xl:text-8xl">
-              Agentic Incident Response Platform
+              Advanced Alert Management Platform
+              {/* Agentic Incident Response Platform */}
             </TextEffect>
 
             {/* <TextEffect
@@ -57,13 +63,12 @@ export default function PremiumHero() {
               Automated triage, response, and resolution.
             </TextEffect> */}
 
-            <AnimatedGroup preset="blur-slide" className='mt-10'>
+            {/* <AnimatedGroup preset="blur-slide" className='mt-10'>
               <Link
                 href="/blog/introducing-warrn"
                 className="hover:bg-background dark:hover:border-t-border group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
                 <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
                 
-                {/* <span className="text-foreground text-sm">AI-Powered Incident Management</span> */}
                 <span className="text-foreground text-sm">Automated triage, response, and resolution</span>
                 <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
@@ -78,10 +83,10 @@ export default function PremiumHero() {
                   </div>
                 </div>
               </Link>
-            </AnimatedGroup>
+            </AnimatedGroup> */}
 
 
-            <AnimatedGroup preset="blur-slide" className="mt-10 flex flex-col items-center justify-center gap-3 md:flex-row">
+            {/* <AnimatedGroup preset="blur-slide" className="mt-10 flex flex-col items-center justify-center gap-3 md:flex-row">
               <EmailInput
                 onSubmit={handleEmailSubmit}
                 placeholder="your@company.com"
@@ -89,7 +94,7 @@ export default function PremiumHero() {
                 size="lg"
                 showHelperText={false}
               />
-            </AnimatedGroup>
+            </AnimatedGroup> */}
           </div>
         </div>
 

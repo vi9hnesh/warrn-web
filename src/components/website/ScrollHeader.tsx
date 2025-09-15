@@ -126,7 +126,7 @@ const ScrollHeader = () => {
                 <span className="sr-only">Toggle theme</span>
               </Button>
 
-              <Link href="/login">
+              <Link href="https://app.warrn.io">
                 <Button size="lg" className="font-mono">Try Warrn</Button>
               </Link>
             </div>

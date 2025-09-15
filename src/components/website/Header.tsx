@@ -16,10 +16,10 @@ import {
 import Image from 'next/image'
 
 const menuItems = [
-    { name: 'Features', href: '/features' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
+    // { name: 'Features', href: '/features' },
+    // { name: 'Pricing', href: '/pricing' },
+    // { name: 'About', href: '/about' },
+    // { name: 'Blog', href: '/blog' },
 ]
 
 export const HeroHeader = () => {
@@ -148,7 +148,7 @@ export const HeroHeader = () => {
                                     asChild
                                     size="lg"
                                     className='lg:inline-flex font-mono rounded-2xl'>
-                                    <Link href="/login">
+                                    <Link href="https://app.warrn.io/sign-up">
                                         <span>Try Warrn</span>
                                     </Link>
                                 </Button>

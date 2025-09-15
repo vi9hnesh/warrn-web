@@ -10,18 +10,18 @@ import Footer from "@/components/website/Footer";
 import { generateMetadata as generateSEOMetadata, SITE_CONFIG } from "@/lib/seo";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "AI-Powered Incident Management Platform",
-  description: "Transform your incident response with Warrn's AI-powered platform. Intelligent triage, automated workflows, and continuous learning for modern DevOps teams. Reduce downtime by 70% with smart incident management.",
+  title: "Comprehensive Alert Management & Team Organization Platform",
+  description: "Advanced alert lifecycle management with team organization and service cataloging. Complete alert filtering, team collaboration, and service inventory management.",
   keywords: [
     ...SITE_CONFIG.keywords,
-    "incident response platform",
-    "DevOps automation",
-    "AI monitoring",
-    "reduce downtime",
-    "intelligent alerting",
-    "automated triage",
-    "SRE platform",
-    "multi-tenant incident management"
+    "alert management system",
+    "team organization platform", 
+    "service catalog",
+    "alert lifecycle",
+    "team collaboration",
+    "service inventory",
+    "alert filtering",
+    "incident collaboration"
   ],
   canonicalUrl: SITE_CONFIG.url,
   type: 'website'
@@ -58,7 +58,7 @@ export default function Home() {
       {/* Reduced padding since floating navbar takes less space */}
       <div>
         <PremiumHero />
-        <MultiCardFeature />
+        {/* <MultiCardFeature /> */}
         {/* <Suspense fallback={<SectionSkeleton />}>
           <PremiumGallery />
         </Suspense> */}
@@ -66,8 +66,9 @@ export default function Home() {
           <div id="features">
               {/* <FeaturesSection /> */}
               <Features />
-              <FeaturesSection2 />
-              <Features3 />
+              {/* Additional features commented out until ready */}
+              {/* <FeaturesSection2 /> */}
+              {/* <Features3 /> */}
             </div>
         </Suspense>
         {/* <Suspense fallback={<SectionSkeleton />}>
