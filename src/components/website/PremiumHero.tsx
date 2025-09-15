@@ -22,7 +22,7 @@ export default function PremiumHero() {
         {/* Background media */}
         <div aria-hidden className="absolute inset-0 -z-20">
           <Image
-            src="/images/premium/dave-hoefler-g1NR2UZjjws-unsplash.jpg"
+            src="https://ewy331gkzr.ufs.sh/f/yR0adrtOWAV365zKyC749LXjex4nRDYOIkvzmEB51iKHUVtr"
             alt="Atmospheric mountain scene"
             fill
             priority
@@ -104,7 +104,7 @@ export default function PremiumHero() {
             <div className="relative overflow-hidden rounded-3xl border bg-background/60 p-2 shadow-lg shadow-zinc-950/10 ring-1 ring-border/50 backdrop-blur supports-[backdrop-filter]:backdrop-blur">
               <div className="relative aspect-[15/8] w-full overflow-hidden rounded-xl">
                 <Image
-                  src="/images/premium/clem-onojeghuo-nQ6X7BN8QtA-unsplash.jpg"
+                  src="https://ewy331gkzr.ufs.sh/f/yR0adrtOWAV30ZrAoiG3phjzOiYSdNfGP9TlEb2oAkFDgMts"
                   alt="Premium UI inspiration"
                   fill
                   sizes="(max-width: 1024px) 100vw, 1200px"

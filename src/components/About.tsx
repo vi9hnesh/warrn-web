@@ -10,7 +10,7 @@ export default function About() {
                     <hr />
                     <p>We built Warrn because we were tired of incident response tools that created more problems than they solved. Modern teams deserve modern tools that actually help them get work done.</p>
                 </div>
-                <Image src="/images/about.jpg" alt="team image" width={1000} height={1000} className="rounded-(--radius) grayscale" loading="lazy" />
+                <Image src="https://ewy331gkzr.ufs.sh/f/yR0adrtOWAV3msjqj50zqHFcd9xB0jnENTf7sreg4SYRyaCU" alt="team image" width={1000} height={1000} className="rounded-(--radius) grayscale" loading="lazy" />
                 {/* <img className="rounded-(--radius) grayscale" src="https://images.unsplash.com/photo-1616587226960-4a03badbe8bf?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="team image" height="" width="" loading="lazy" /> */}
                 <div className="relative mx-auto grid grid-cols-2 gap-x-3 gap-y-6 sm:gap-8 lg:grid-cols-4">
                     <div className="space-y-3">
@@ -23,9 +23,9 @@ export default function About() {
                     <div className="space-y-2">
                         <div className="flex items-center gap-2">
                             <Sprout className="size-4" />
-                            <h3 className="text-sm font-medium">AI with Purpose</h3>
+                            <h3 className="text-sm font-medium">Built with Purpose</h3>
                         </div>
-                        <p className="text-muted-foreground text-sm">We use AI to solve real problems, not to add buzzwords.</p>
+                        <p className="text-muted-foreground text-sm">We built Warrn to solve real problems, not to add buzzwords.</p>
                     </div>
                     <div className="space-y-2">
                         <div className="flex items-center gap-2">
