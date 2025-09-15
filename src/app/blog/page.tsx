@@ -42,12 +42,12 @@ export default async function BlogPage() {
       {/* <ScrollHeader /> */}
       <HeroHeader />
       
-      <div className="pt-20">
-        <div className="container mx-auto px-4 py-32">
-          <div className="max-w-6xl mx-auto">
+      <div className="py-32">
+        <div className="container mx-auto px-4 py-16 rounded-3xl">
+          <div className="max-w-7xl mx-auto">
             {/* Header */}
             <div className="mx-auto max-w-xl space-y-6 text-center mb-20">
-                <h2 className="text-balance text-4xl font-medium lg:text-5xl">We are opinionated</h2>
+                <h2 className="text-balance text-4xl lg:text-5xl">We are opinionated</h2>
                 <hr />
                 {/* <p>Our blog</p> */}
             </div>
@@ -109,18 +109,29 @@ export default async function BlogPage() {
                   </CardContent>
                 </Card>
               ) : (
-                <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+                <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3 bg-zinc-50 p-10 rounded-3xl">
                   {posts.map((post, index) => (
                     <Link key={post.slug} href={`/blog/${post.slug}`} className="block">
-                      <Card className="group hover:border-black transition-all duration-300 border-gray-200 bg-gradient-to-br from-background to-muted/20 overflow-hidden flex flex-col h-full cursor-pointer shadow-none p-0">
+                      <Card className="group transition-all duration-300 border-gray-200 bg-gradient-to-br from-background to-muted/20 overflow-hidden flex flex-col h-full cursor-pointer shadow-none p-0 gap-1">
                         {post.featuredImage && (
                           <div className="relative h-48 overflow-hidden">
-                            <Image
-                              src={post.featuredImage.startsWith('/') ? post.featuredImage : `/images/blog/${post.featuredImage}`}
-                              alt={post.featuredImageAlt || post.title}
-                              fill
-                              className="object-cover group-hover:scale-105 transition-transform duration-300"
-                            />
+                            {post.featuredImage.endsWith('.mp4') || post.featuredImage.endsWith('.gif') ? (
+                              <video
+                                src={post.featuredImage.startsWith('/') ? post.featuredImage : `/images/blog/${post.featuredImage}`}
+                                autoPlay
+                                muted
+                                playsInline
+                                preload="metadata"
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            ) : (
+                              <Image
+                                src={post.featuredImage.startsWith('/') ? post.featuredImage : `/images/blog/${post.featuredImage}`}
+                                alt={post.featuredImageAlt || post.title}
+                                fill
+                                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            )}
                           </div>
                         )}
                         <div className="p-6 flex-1 flex flex-col">

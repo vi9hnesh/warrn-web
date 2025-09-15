@@ -1,15 +1,8 @@
 import { Metadata } from "next";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import HeroSection from "@/components/website/HeroSection";
-import HeroSection1 from "@/components/website/Hero-section-1";
-import FeaturesSection from "@/components/website/Features";
-import HowItWorks from "@/components/website/HowItWorks";
-import Pricing from "@/components/website/Pricing";
+import PremiumHero from "@/components/website/PremiumHero";
 import CTASection from "@/components/website/CTA";
-import Image from "next/image";
 import { Suspense } from "react";
-import ScrollHeader from "@/components/website/ScrollHeader";
+import MultiCardFeature from "@/components/multi-card-feature";
 import Features from "@/components/features-1";
 import FeaturesSection2 from "@/components/features-2";
 import Features3 from "@/components/features-3";
@@ -17,18 +10,18 @@ import Footer from "@/components/website/Footer";
 import { generateMetadata as generateSEOMetadata, SITE_CONFIG } from "@/lib/seo";
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "AI-Powered Incident Management Platform",
-  description: "Transform your incident response with Warrn's AI-powered platform. Intelligent triage, automated workflows, and continuous learning for modern DevOps teams. Reduce downtime by 70% with smart incident management.",
+  title: "Comprehensive Alert Management & Team Organization Platform",
+  description: "Advanced alert lifecycle management with team organization and service cataloging. Complete alert filtering, team collaboration, and service inventory management.",
   keywords: [
     ...SITE_CONFIG.keywords,
-    "incident response platform",
-    "DevOps automation",
-    "AI monitoring",
-    "reduce downtime",
-    "intelligent alerting",
-    "automated triage",
-    "SRE platform",
-    "multi-tenant incident management"
+    "alert management system",
+    "team organization platform", 
+    "service catalog",
+    "alert lifecycle",
+    "team collaboration",
+    "service inventory",
+    "alert filtering",
+    "incident collaboration"
   ],
   canonicalUrl: SITE_CONFIG.url,
   type: 'website'
@@ -64,14 +57,18 @@ export default function Home() {
       
       {/* Reduced padding since floating navbar takes less space */}
       <div>
-        {/* <HeroSection /> */}
-        <HeroSection1 />
+        <PremiumHero />
+        {/* <MultiCardFeature /> */}
+        {/* <Suspense fallback={<SectionSkeleton />}>
+          <PremiumGallery />
+        </Suspense> */}
         <Suspense fallback={<FeaturesSkeleton />}>
           <div id="features">
               {/* <FeaturesSection /> */}
-              <FeaturesSection2 />
               <Features />
-              <Features3 />
+              {/* Additional features commented out until ready */}
+              {/* <FeaturesSection2 /> */}
+              {/* <Features3 /> */}
             </div>
         </Suspense>
         {/* <Suspense fallback={<SectionSkeleton />}>

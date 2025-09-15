@@ -74,7 +74,7 @@ export function TableOfContents({ headings }: TableOfContentsProps) {
 
   return (
     <aside className="hidden lg:block w-64 flex-shrink-0">
-      <div className="sticky top-24 space-y-6">
+      <div className="sticky top-40 space-y-6">
         {/* Back Navigation */}
         <Link href="/blog" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors">
           <ArrowLeft className="h-4 w-4 mr-2" />

@@ -6,7 +6,7 @@ export default function About() {
         <section className="py-16 md:py-32">
             <div className="mx-auto max-w-5xl space-y-8 px-6 md:space-y-12">
                 <div className="mx-auto max-w-xl space-y-6 mt-10 text-center md:space-y-12">
-                    <h2 className="text-balance text-4xl font-medium lg:text-5xl">Our Mission</h2>
+                    <h2 className="text-balance text-4xl  lg:text-5xl">Our Mission</h2>
                     <hr />
                     <p>We built Warrn because we were tired of incident response tools that created more problems than they solved. Modern teams deserve modern tools that actually help them get work done.</p>
                 </div>
