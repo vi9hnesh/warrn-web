@@ -18,7 +18,7 @@ export default function PremiumHero() {
   return (
     <>
       <HeroHeader />
-      <section className="relative isolate overflow-hidden pb-14 m-22 mt-28 border-none rounded-3xl">
+      <section className="relative isolate overflow-hidden pb-14 lg:m-22 mt-24 lg:mt-28 border-none lg:rounded-3xl">
         {/* Background media */}
         <div aria-hidden className="absolute inset-0 -z-20">
           <Image
