@@ -2,7 +2,7 @@ name: Mirror to personal
 
 on:
   push:
-    branches: [ main ]      # change if your default isn't 'main'
+    branches: [ master ]      # change if your default isn't 'main'
   workflow_dispatch:
   schedule:
     - cron: "0 3 * * *"
