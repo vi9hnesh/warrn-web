@@ -13,7 +13,7 @@ import NumberFlow from '@number-flow/react'
 const pricingPlans = [
     {
         name: "Basic",
-        description: "For: Solo devs & small teams just getting started.",
+        description: "Everything you need to get started",
         monthlyPrice: "$9",
         yearlyPrice: "$7",
         period: "per seat / month",
@@ -32,7 +32,7 @@ const pricingPlans = [
     },
     {
         name: "Professional",
-        description: "For: Startups & growing teams who want AI-powered operations.",
+        description: "Startups & growing teams",
         monthlyPrice: "$29",
         yearlyPrice: "$25",
         period: "per seat / month",
@@ -51,7 +51,7 @@ const pricingPlans = [
     },
     {
         name: "Advanced",
-        description: "For: Larger orgs or teams needing enterprise control.",
+        description: "Doesn't get any better than this",
         monthlyPrice: "$45",
         yearlyPrice: "$39",
         period: "per seat / month",
