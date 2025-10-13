@@ -29,15 +29,15 @@ export default function TermsPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 border-b pb-6">
               <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
-              <p className="text-muted-foreground">Last updated: July 21, 2025</p>
+              <p className="text-muted-foreground">Last updated: October 13, 2024</p>
             </div>
 
             <div className="prose prose-slate dark:prose-invert max-w-none space-y-8">
-              <section>
+              <section id="agreement-to-terms">
                 <h2 className="text-2xl font-semibold mb-4">1. Agreement to Terms</h2>
                 <p className="mb-4">
-                  These Terms of Service ("Terms") constitute a legally binding agreement between you and Emphoni Inc. 
-                  ("Company," "we," "us," or "our") regarding your use of the Warrn incident management platform and 
+                  These Terms of Service ("Terms") constitute a legally binding agreement between you and Warrn Inc.
+                  ("Company," "we," "us," or "our") regarding your use of the Warrn incident management platform and
                   related services (collectively, the "Service").
                 </p>
                 <p>
@@ -46,7 +46,7 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="description-of-service">
                 <h2 className="text-2xl font-semibold mb-4">2. Description of Service</h2>
                 <p className="mb-4">
                   Warrn provides an AI-powered incident management platform designed to help organizations detect, 
@@ -62,7 +62,7 @@ export default function TermsPage() {
                 </ul>
               </section>
 
-              <section>
+              <section id="user-accounts">
                 <h2 className="text-2xl font-semibold mb-4">3. User Accounts and Registration</h2>
                 <h3 className="text-lg font-medium mb-2">3.1 Account Creation</h3>
                 <p className="mb-4">
@@ -84,7 +84,7 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="acceptable-use">
                 <h2 className="text-2xl font-semibold mb-4">4. Acceptable Use Policy</h2>
                 <p className="mb-4">You agree not to use the Service to:</p>
                 <ul className="list-disc list-inside space-y-2 mb-4">
@@ -98,7 +98,7 @@ export default function TermsPage() {
                 </ul>
               </section>
 
-              <section>
+              <section id="data-and-privacy">
                 <h2 className="text-2xl font-semibold mb-4">5. Data and Privacy</h2>
                 <h3 className="text-lg font-medium mb-2">5.1 Your Data</h3>
                 <p className="mb-4">
@@ -120,7 +120,7 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="service-availability">
                 <h2 className="text-2xl font-semibold mb-4">6. Service Availability and Support</h2>
                 <h3 className="text-lg font-medium mb-2">6.1 Service Level</h3>
                 <p className="mb-4">
@@ -135,7 +135,7 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="subscription-payment">
                 <h2 className="text-2xl font-semibold mb-4">7. Subscription and Payment Terms</h2>
                 <h3 className="text-lg font-medium mb-2">7.1 Subscription Plans</h3>
                 <p className="mb-4">
@@ -156,7 +156,7 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="intellectual-property">
                 <h2 className="text-2xl font-semibold mb-4">8. Intellectual Property</h2>
                 <h3 className="text-lg font-medium mb-2">8.1 Our IP</h3>
                 <p className="mb-4">
@@ -171,7 +171,7 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="limitation-of-liability">
                 <h2 className="text-2xl font-semibold mb-4">9. Limitation of Liability</h2>
                 <p className="mb-4">
                   TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, 
@@ -195,7 +195,7 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="indemnification">
                 <h2 className="text-2xl font-semibold mb-4">10. Indemnification</h2>
                 <p>
                   You agree to indemnify and hold us harmless from any claims, damages, or expenses 
@@ -204,7 +204,7 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="termination">
                 <h2 className="text-2xl font-semibold mb-4">11. Termination</h2>
                 <h3 className="text-lg font-medium mb-2">11.1 Termination by You</h3>
                 <p className="mb-4">
@@ -225,8 +225,36 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
-                <h2 className="text-2xl font-semibold mb-4">12. Compliance and Certifications</h2>
+              <section id="cancellation-and-refund">
+                <h2 className="text-2xl font-semibold mb-4">12. Cancellation and Refund Policy</h2>
+                <h3 className="text-lg font-medium mb-2">12.1 Cancellation</h3>
+                <p className="mb-4">
+                  You may cancel your subscription at any time through your account settings or by contacting
+                  our support team. Cancellation will take effect at the end of the current billing period.
+                </p>
+                
+                <h3 className="text-lg font-medium mb-2">12.2 Refunds</h3>
+                <p className="mb-4">
+                  We offer a 30-day money-back guarantee for new subscriptions. If you are not satisfied
+                  with our Service within the first 30 days, you may request a full refund by contacting
+                  our support team.
+                </p>
+                <p className="mb-4">
+                  After the 30-day period, refunds are provided at our discretion and may be considered
+                  for service outages or other significant issues. Refunds, if approved, will be prorated
+                  for the unused portion of your subscription.
+                </p>
+                
+                <h3 className="text-lg font-medium mb-2">12.3 Refund Process</h3>
+                <p>
+                  To request a refund, please contact our support team at support@warrn.io with your
+                  account information and reason for the refund request. Refund requests are typically
+                  processed within 7 business days.
+                </p>
+              </section>
+
+              <section id="compliance">
+                <h2 className="text-2xl font-semibold mb-4">13. Compliance and Certifications</h2>
                 <p className="mb-4">
                   We are committed to maintaining high security standards and implementing industry best 
                   practices for data protection and system security. Information about our current security 
@@ -234,8 +262,8 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
-                <h2 className="text-2xl font-semibold mb-4">13. Changes to Terms</h2>
+              <section id="changes-to-terms">
+                <h2 className="text-2xl font-semibold mb-4">14. Changes to Terms</h2>
                 <p className="mb-4">
                   We may modify these Terms from time to time. We will notify you of material changes 
                   through the Service or other reasonable means. Your continued use of the Service 
@@ -243,19 +271,21 @@ export default function TermsPage() {
                 </p>
               </section>
 
-              <section>
-                <h2 className="text-2xl font-semibold mb-4">14. Governing Law</h2>
+              <section id="governing-law">
+                <h2 className="text-2xl font-semibold mb-4">15. Governing Law</h2>
                 <p className="mb-4">
-                  TBD
+                  These Terms shall be governed by and construed in accordance with the laws of India,
+                  without regard to its conflict of law principles. Any disputes arising from these Terms
+                  shall be subject to the exclusive jurisdiction of the courts located in Bangalore, Karnataka.
                 </p>
               </section>
 
-              <section>
-                <h2 className="text-2xl font-semibold mb-4">15. Contact Information</h2>
+              <section id="contact-information">
+                <h2 className="text-2xl font-semibold mb-4">16. Contact Information</h2>
                 <p>
                   For questions about these Terms, please contact us at:{" "}
-                  <a href="mailto:legal@emphoni.com" className="text-primary hover:underline">
-                    legal@emphoni.com
+                  <a href="mailto:support@warrn.io" className="text-primary hover:underline">
+                    support@warrn.io
                   </a>
                 </p>
               </section>

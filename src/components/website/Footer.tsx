@@ -34,12 +34,16 @@ const links = [
         group: 'Company',
         items: [
             {
-                title: 'emphoni',
-                href: 'https://emphoni.com',
+                title: 'Warrn',
+                href: 'https://warrn.io',
             },
             {
                 title: 'About',
                 href: '/about',
+            },
+            {
+                title: 'Contact',
+                href: '/contact',
             },
         ],
     },

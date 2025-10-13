@@ -29,16 +29,16 @@ export default function PrivacyPage() {
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 border-b pb-6">
               <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
-              <p className="text-muted-foreground">Last updated: July 21, 2025</p>
+              <p className="text-muted-foreground">Last updated: October 13, 2024</p>
             </div>
 
             <div className="prose prose-slate dark:prose-invert max-w-none space-y-8">
-              <section>
+              <section id="introduction">
                 <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
                 <p className="mb-4">
-                  Emphoni Inc. ("Emphoni," "we," "us," or "our") is committed to protecting your privacy and personal 
-                  information. This Privacy Policy explains how we collect, use, disclose, and safeguard your 
-                  information when you use our AI-powered incident management platform and related services 
+                  Warrn Inc. ("Warrn," "we," "us," or "our") is committed to protecting your privacy and personal
+                  information. This Privacy Policy explains how we collect, use, disclose, and safeguard your
+                  information when you use our AI-powered incident management platform and related services
                   (collectively, the "Service").
                 </p>
                 <p>
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="information-we-collect">
                 <h2 className="text-2xl font-semibold mb-4">2. Information We Collect</h2>
                 
                 <h3 className="text-lg font-medium mb-2">2.1 Personal Information</h3>
@@ -76,7 +76,7 @@ export default function PrivacyPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="how-we-use-information">
                 <h2 className="text-2xl font-semibold mb-4">3. How We Use Your Information</h2>
                 
                 <h3 className="text-lg font-medium mb-2">3.1 Service Provision</h3>
@@ -105,7 +105,7 @@ export default function PrivacyPage() {
                 </ul>
               </section>
 
-              <section>
+              <section id="data-sharing">
                 <h2 className="text-2xl font-semibold mb-4">4. Data Sharing and Disclosure</h2>
                 
                 <h3 className="text-lg font-medium mb-2">4.1 With Your Consent</h3>
@@ -144,7 +144,7 @@ export default function PrivacyPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="data-security">
                 <h2 className="text-2xl font-semibold mb-4">5. Data Security</h2>
                 
                 <h3 className="text-lg font-medium mb-2">5.1 Security Measures</h3>
@@ -176,7 +176,7 @@ export default function PrivacyPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="data-retention">
                 <h2 className="text-2xl font-semibold mb-4">6. Data Retention</h2>
                 
                 <h3 className="text-lg font-medium mb-2">6.1 Retention Periods</h3>
@@ -194,7 +194,7 @@ export default function PrivacyPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="privacy-rights">
                 <h2 className="text-2xl font-semibold mb-4">7. Your Privacy Rights</h2>
                 
                 <h3 className="text-lg font-medium mb-2">7.1 General Rights</h3>
@@ -225,14 +225,14 @@ export default function PrivacyPage() {
                 <h3 className="text-lg font-medium mb-2">7.4 Exercising Your Rights</h3>
                 <p>
                   To exercise any of these rights, please contact us at{" "}
-                  <a href="mailto:privacy@emphoni.com" className="text-primary hover:underline">
-                    privacy@emphoni.com
-                  </a>. 
+                  <a href="mailto:privacy@warrn.io" className="text-primary hover:underline">
+                    privacy@warrn.io
+                  </a>.
                   We will respond to your request within 30 days.
                 </p>
               </section>
 
-              <section>
+              <section id="international-transfers">
                 <h2 className="text-2xl font-semibold mb-4">8. International Data Transfers</h2>
                 <p className="mb-4">
                   Your information may be transferred to and processed in countries other than your 
@@ -246,7 +246,7 @@ export default function PrivacyPage() {
                 </ul>
               </section>
 
-              <section>
+              <section id="cookies">
                 <h2 className="text-2xl font-semibold mb-4">9. Cookies and Tracking Technologies</h2>
                 
                 <h3 className="text-lg font-medium mb-2">9.1 Types of Cookies</h3>
@@ -265,7 +265,7 @@ export default function PrivacyPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="childrens-privacy">
                 <h2 className="text-2xl font-semibold mb-4">10. Children's Privacy</h2>
                 <p>
                   Our Service is not intended for children under 16 years of age. We do not knowingly 
@@ -274,7 +274,7 @@ export default function PrivacyPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="changes-to-privacy">
                 <h2 className="text-2xl font-semibold mb-4">11. Changes to This Privacy Policy</h2>
                 <p className="mb-4">
                   We may update this Privacy Policy from time to time. We will notify you of any 
@@ -288,13 +288,13 @@ export default function PrivacyPage() {
                 </p>
               </section>
 
-              <section>
+              <section id="privacy-contact">
                 <h2 className="text-2xl font-semibold mb-4">12. Contact Information</h2>
                 <p className="mb-4">
-                  If you have questions about this Privacy Policy or our privacy practices, 
+                  If you have questions about this Privacy Policy or our privacy practices,
                   please contact us at:{" "}
-                  <a href="mailto:privacy@emphoni.com" className="text-primary hover:underline">
-                    privacy@emphoni.com
+                  <a href="mailto:privacy@warrn.io" className="text-primary hover:underline">
+                    privacy@warrn.io
                   </a>
                 </p>
               </section>

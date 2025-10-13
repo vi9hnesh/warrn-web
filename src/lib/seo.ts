@@ -33,7 +33,7 @@ export interface BlogPostSEO {
 export const SITE_CONFIG = {
   name: 'Warrn',
   description: 'AI-powered incident management platform that transforms how teams handle disruptions and maintain system reliability with intelligent triage, automated response, and continuous learning.',
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://warrn.com',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://warrn.io',
   ogImage: '/images/warrn-og-image.jpg',
   twitterHandle: '@warrnplatform',
   keywords: [
@@ -56,21 +56,21 @@ export const SITE_CONFIG = {
   company: {
     name: 'Warrn',
     legalName: 'Warrn Inc.',
-    url: 'https://warrn.com',
+    url: 'https://warrn.io',
     logo: '/logo.svg',
     description: 'AI-powered incident management platform for modern teams',
     foundingDate: '2024',
     address: {
       streetAddress: '',
-      addressLocality: '',
-      addressRegion: '',
+      addressLocality: 'Bangalore',
+      addressRegion: 'Karnataka',
       postalCode: '',
-      addressCountry: 'US'
+      addressCountry: 'IN'
     },
     contactPoint: {
       telephone: '',
       contactType: 'customer service',
-      email: 'support@warrn.com'
+      email: 'support@warrn.io'
     },
     sameAs: [
       'https://twitter.com/warrnplatform',

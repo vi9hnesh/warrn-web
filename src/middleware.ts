@@ -96,6 +96,7 @@ export async function middleware(request: NextRequest) {
     '/blog',
     '/features',
     '/pricing',
+    '/contact',
     '/login'
   ]
   
