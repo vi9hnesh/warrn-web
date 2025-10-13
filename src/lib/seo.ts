@@ -55,28 +55,13 @@ export const SITE_CONFIG = {
   author: 'Warrn Team',
   company: {
     name: 'Warrn',
-    legalName: 'Warrn Inc.',
     url: 'https://warrn.io',
     logo: '/logo.svg',
     description: 'AI-powered incident management platform for modern teams',
-    foundingDate: '2024',
-    address: {
-      streetAddress: '',
-      addressLocality: 'Bangalore',
-      addressRegion: 'Karnataka',
-      postalCode: '',
-      addressCountry: 'IN'
-    },
     contactPoint: {
-      telephone: '',
       contactType: 'customer service',
       email: 'support@warrn.io'
-    },
-    sameAs: [
-      'https://twitter.com/warrnplatform',
-      'https://linkedin.com/company/warrn',
-      'https://github.com/warrn'
-    ]
+    }
   }
 }
 
@@ -183,20 +168,13 @@ export function generateOrganizationStructuredData() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE_CONFIG.company.name,
-    legalName: SITE_CONFIG.company.legalName,
     url: SITE_CONFIG.company.url,
     logo: `${SITE_CONFIG.url}${SITE_CONFIG.company.logo}`,
     description: SITE_CONFIG.company.description,
-    foundingDate: SITE_CONFIG.company.foundingDate,
-    address: {
-      '@type': 'PostalAddress',
-      ...SITE_CONFIG.company.address,
-    },
     contactPoint: {
       '@type': 'ContactPoint',
       ...SITE_CONFIG.company.contactPoint,
     },
-    sameAs: SITE_CONFIG.company.sameAs,
   }
 }
 
