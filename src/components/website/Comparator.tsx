@@ -4,46 +4,82 @@ import Link from 'next/link'
 
 const tableData = [
     {
-        feature: 'Feature 1',
-        free: true,
-        pro: true,
-        startup: true,
+        feature: 'Users per Team',
+        basic: 'Up to 5',
+        professional: 'Up to 25',
+        advanced: 'Unlimited',
     },
     {
-        feature: 'Feature 2',
-        free: true,
-        pro: true,
-        startup: true,
+        feature: 'Alerts & Incidents',
+        basic: true,
+        professional: true,
+        advanced: true,
     },
     {
-        feature: 'Feature 3',
-        free: false,
-        pro: true,
-        startup: true,
+        feature: 'Status Page',
+        basic: 'Public only',
+        professional: 'Custom DNS + Private',
+        advanced: 'Custom DNS + Private',
     },
     {
-        feature: 'Tokens',
-        free: '',
-        pro: '20 Users',
-        startup: 'Unlimited',
+        feature: 'Runbooks',
+        basic: 'Basic',
+        professional: 'AI-powered',
+        advanced: 'Advanced templates',
     },
     {
-        feature: 'Video calls',
-        free: '',
-        pro: '12 Weeks',
-        startup: '56',
+        feature: 'Tasks / Projects',
+        basic: false,
+        professional: true,
+        advanced: true,
     },
     {
-        feature: 'Support',
-        free: '',
-        pro: 'Secondes',
-        startup: 'Unlimited',
+        feature: 'Integrations',
+        basic: false,
+        professional: 'Slack & GitHub',
+        advanced: '+ Premium Integrations',
     },
     {
-        feature: 'Security',
-        free: '',
-        pro: '20 Users',
-        startup: 'Unlimited',
+        feature: 'On-Call Minutes',
+        basic: '—',
+        professional: '80',
+        advanced: '200',
+    },
+    {
+        feature: 'AI Credits',
+        basic: '10',
+        professional: '100',
+        advanced: '250',
+    },
+    {
+        feature: 'Phone Calls',
+        basic: false,
+        professional: true,
+        advanced: true,
+    },
+    {
+        feature: 'Triage AI',
+        basic: false,
+        professional: true,
+        advanced: true,
+    },
+    {
+        feature: 'Team Analytics',
+        basic: false,
+        professional: 'Basic',
+        advanced: 'Advanced',
+    },
+    {
+        feature: 'SSO / Audit Logs',
+        basic: false,
+        professional: false,
+        advanced: true,
+    },
+    {
+        feature: 'Add-ons',
+        basic: 'AI & Call top-ups',
+        professional: 'AI & Call top-ups',
+        advanced: 'AI & Call top-ups',
     },
 ]
 
@@ -57,30 +93,29 @@ export default function PricingComparator() {
                             <tr className="*:py-4 *:text-left *:font-medium">
                                 <th className="lg:w-2/5"></th>
                                 <th className="space-y-3">
-                                    <span className="block">Free</span>
-
+                                    <span className="block">Basic</span>
                                     <Button
                                         asChild
                                         variant="outline"
                                         size="sm">
-                                        <Link href="#">Get Started</Link>
+                                        <Link href="/register">Start 14-day free trial</Link>
                                     </Button>
                                 </th>
                                 <th className="bg-muted rounded-t-(--radius) space-y-3 px-4">
-                                    <span className="block">Pro</span>
+                                    <span className="block">Professional</span>
                                     <Button
                                         asChild
                                         size="sm">
-                                        <Link href="#">Get Started</Link>
+                                        <Link href="/register">Start 14-day free trial</Link>
                                     </Button>
                                 </th>
                                 <th className="space-y-3">
-                                    <span className="block">Startup</span>
+                                    <span className="block">Advanced</span>
                                     <Button
                                         asChild
                                         variant="outline"
                                         size="sm">
-                                        <Link href="#">Get Started</Link>
+                                        <Link href="/contact">Contact sales / Start trial</Link>
                                     </Button>
                                 </th>
                             </tr>
@@ -95,82 +130,13 @@ export default function PricingComparator() {
                                 <td className="bg-muted border-none px-4"></td>
                                 <td></td>
                             </tr>
-                            {tableData.slice(-4).map((row, index) => (
-                                <tr
-                                    key={index}
-                                    className="*:border-b *:py-3">
-                                    <td className="text-muted-foreground">{row.feature}</td>
-                                    <td>
-                                        {row.free === true ? (
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="currentColor"
-                                                className="size-4">
-                                                <path
-                                                    fillRule="evenodd"
-                                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                                    clipRule="evenodd"
-                                                />
-                                            </svg>
-                                        ) : (
-                                            row.free
-                                        )}
-                                    </td>
-                                    <td className="bg-muted border-none px-4">
-                                        <div className="-mb-3 border-b py-3">
-                                            {row.pro === true ? (
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 24 24"
-                                                    fill="currentColor"
-                                                    className="size-4">
-                                                    <path
-                                                        fillRule="evenodd"
-                                                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                                        clipRule="evenodd"
-                                                    />
-                                                </svg>
-                                            ) : (
-                                                row.pro
-                                            )}
-                                        </div>
-                                    </td>
-                                    <td>
-                                        {row.startup === true ? (
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="currentColor"
-                                                className="size-4">
-                                                <path
-                                                    fillRule="evenodd"
-                                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                                                    clipRule="evenodd"
-                                                />
-                                            </svg>
-                                        ) : (
-                                            row.startup
-                                        )}
-                                    </td>
-                                </tr>
-                            ))}
-                            <tr className="*:pb-3 *:pt-8">
-                                <td className="flex items-center gap-2 font-medium">
-                                    <Sparkles className="size-4" />
-                                    <span>AI Models</span>
-                                </td>
-                                <td></td>
-                                <td className="bg-muted border-none px-4"></td>
-                                <td></td>
-                            </tr>
                             {tableData.map((row, index) => (
                                 <tr
                                     key={index}
                                     className="*:border-b *:py-3">
                                     <td className="text-muted-foreground">{row.feature}</td>
                                     <td>
-                                        {row.free === true ? (
+                                        {row.basic === true ? (
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 24 24"
@@ -182,13 +148,23 @@ export default function PricingComparator() {
                                                     clipRule="evenodd"
                                                 />
                                             </svg>
+                                        ) : row.basic === false ? (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                strokeWidth="1.5"
+                                                stroke="currentColor"
+                                                className="size-4 text-red-500">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                            </svg>
                                         ) : (
-                                            row.free
+                                            row.basic
                                         )}
                                     </td>
                                     <td className="bg-muted border-none px-4">
                                         <div className="-mb-3 border-b py-3">
-                                            {row.pro === true ? (
+                                            {row.professional === true ? (
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 24 24"
@@ -200,13 +176,23 @@ export default function PricingComparator() {
                                                         clipRule="evenodd"
                                                     />
                                                 </svg>
+                                            ) : row.professional === false ? (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="none"
+                                                    viewBox="0 0 24 24"
+                                                    strokeWidth="1.5"
+                                                    stroke="currentColor"
+                                                    className="size-4 text-red-500">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                                </svg>
                                             ) : (
-                                                row.pro
+                                                row.professional
                                             )}
                                         </div>
                                     </td>
                                     <td>
-                                        {row.startup === true ? (
+                                        {row.advanced === true ? (
                                             <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 24 24"
@@ -218,8 +204,18 @@ export default function PricingComparator() {
                                                     clipRule="evenodd"
                                                 />
                                             </svg>
+                                        ) : row.advanced === false ? (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                strokeWidth="1.5"
+                                                stroke="currentColor"
+                                                className="size-4 text-red-500">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                            </svg>
                                         ) : (
-                                            row.startup
+                                            row.advanced
                                         )}
                                     </td>
                                 </tr>

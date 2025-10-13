@@ -92,13 +92,12 @@ const ScrollHeader = () => {
                 >
                   Features
                 </a>
-                <a 
-                  href="#pricing" 
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
-                  onClick={(e) => scrollToSection(e, "pricing")}
+                <Link
+                  href="/pricing"
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Pricing
-                </a>
+                </Link>
                 <Link 
                   href="/blog"
                   className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
