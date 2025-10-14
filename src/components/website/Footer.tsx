@@ -52,7 +52,7 @@ const links = [
         items: [
             {
                 title: 'Terms',
-                href: '/terms',
+                href: '/early-access-terms',
             },
             {
                 title: 'Privacy',

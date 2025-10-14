@@ -98,7 +98,9 @@ export async function middleware(request: NextRequest) {
     '/pricing',
     '/contact',
     '/shipping',
-    '/login'
+    '/login',
+    '/early-access-terms',
+
   ]
   
   // Check if current path starts with allowed paths (for blog posts, etc.)
