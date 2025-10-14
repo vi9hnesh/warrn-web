@@ -58,6 +58,10 @@ const links = [
                 title: 'Privacy',
                 href: '/privacy',
             },
+            {
+                title: 'Shipping',
+                href: '/shipping',
+            },
         ],
     },
 ]
