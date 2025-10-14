@@ -31,7 +31,6 @@ import { HeroHeader } from '@/components/website/Header'
 import CTA from '@/components/website/CTA'
 import { generateBlogPostMetadata, generateBlogPostStructuredData, generateBreadcrumbStructuredData } from '@/lib/seo'
 import { StructuredData } from '@/components/seo/StructuredData'
-import { BlogImage } from '@/components/BlogImage'
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -520,21 +519,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                             </span>
                           )}
                         </span>
-                      )
-                    },
-                    // Handle custom BlogImage components
-                    blogimage: (props: any) => {
-                      const { src, alt, caption, size, ...rest } = props
-                      if (!src) return null
-                      
-                      return (
-                        <BlogImage
-                          src={src}
-                          alt={alt || ''}
-                          caption={caption}
-                          size={size}
-                          {...rest}
-                        />
                       )
                     },
                     } as any}
