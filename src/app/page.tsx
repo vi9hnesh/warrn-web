@@ -4,10 +4,12 @@ import CTASection from "@/components/website/CTA";
 import { Suspense } from "react";
 import MultiCardFeature from "@/components/multi-card-feature";
 import Features from "@/components/features-1";
-import FeaturesSection2 from "@/components/features-2";
+import FeaturesHeader from "@/components/featuresHeader";
 import Features3 from "@/components/features-3";
 import Footer from "@/components/website/Footer";
 import { generateMetadata as generateSEOMetadata, SITE_CONFIG } from "@/lib/seo";
+import { IntegrationsSection } from "@/components/website/Integrations";
+import AlertdeckBanner from "@/components/alertdeckbanner";
 
 export const metadata: Metadata = generateSEOMetadata({
   title: "Comprehensive Alert Management & Team Organization Platform",
@@ -58,6 +60,9 @@ export default function Home() {
       {/* Reduced padding since floating navbar takes less space */}
       <div>
         <PremiumHero />
+        <FeaturesHeader />
+        <IntegrationsSection />
+        <AlertdeckBanner />
         {/* <MultiCardFeature /> */}
         {/* <Suspense fallback={<SectionSkeleton />}>
           <PremiumGallery />
@@ -67,7 +72,6 @@ export default function Home() {
               {/* <FeaturesSection /> */}
               <Features />
               {/* Additional features commented out until ready */}
-              {/* <FeaturesSection2 /> */}
               {/* <Features3 /> */}
             </div>
         </Suspense>

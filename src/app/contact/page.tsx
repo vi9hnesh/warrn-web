@@ -27,7 +27,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
             <div className="mb-12 border-b pb-6">
-              <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
+              <h1 className="text-4xl font-normal mb-4">Contact Us</h1>
               <p className="text-muted-foreground">
                 Have questions or need help? Our support team is here to assist you.
               </p>
@@ -49,14 +49,13 @@ export default function ContactPage() {
               </section>
 
 
-              <section>
+              <section className="bg-muted/50 rounded-lg p-6 my-6">
                 <h2 className="text-2xl font-semibold mb-4">Self-Service Resources</h2>
                 <p className="mb-4">
                   You might find answers to your questions in our:
                 </p>
                 <ul className="list-disc list-inside space-y-2 mb-4">
                   <li><a href="https://docs.warrn.io" className="text-primary hover:underline">Documentation</a></li>
-                  <li><a href="/blog" className="text-primary hover:underline">Blog</a></li>
                   <li><a href="/features" className="text-primary hover:underline">Features Guide</a></li>
                   <li><a href="/pricing" className="text-primary hover:underline">Pricing Information</a></li>
                 </ul>

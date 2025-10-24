@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
 import { FaviconSwitcher } from "@/components/favicon-switcher";
+import ScrollManager from "@/components/ScrollManager";
 import { StructuredData } from "@/components/seo/StructuredData";
 import { 
   generateMetadata as generateSEOMetadata, 
@@ -90,6 +91,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
             <FaviconSwitcher />
+            <ScrollManager />
             {children}
             <Toaster />
         </ThemeProvider>

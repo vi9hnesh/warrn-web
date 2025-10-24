@@ -107,7 +107,6 @@ export default function Pricing() {
                         <Card key={index} className={plan.isPopular ? "relative border-2 border-primary/20 shadow-lg" : "flex flex-col"}>
                             {plan.isPopular && (
                                 <div className="absolute inset-x-0 -top-3 mx-auto flex h-6 w-fit items-center rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-                                    <Sparkles className="mr-2 size-3" />
                                     Most Popular
                                 </div>
                             )}

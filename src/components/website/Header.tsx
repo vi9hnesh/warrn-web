@@ -16,10 +16,10 @@ import {
 import Image from 'next/image'
 
 const menuItems = [
-    { name: 'Features', href: '/features' },
+    // { name: 'Features', href: '/features' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
+    // { name: 'Blog', href: '/blog' },
 ]
 
 export const HeroHeader = () => {

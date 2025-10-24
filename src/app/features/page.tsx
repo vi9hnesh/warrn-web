@@ -1,11 +1,13 @@
 import { Metadata } from "next";
 import Features from "@/components/features-1";
-import FeaturesSection2 from "@/components/features-2";
+import FeaturesHeader from "@/components/featuresHeader";
 import Features3 from "@/components/features-3";
 import { HeroHeader } from "@/components/website/Header";
 import Footer from "@/components/website/Footer";
 import CTA from "@/components/website/CTA";
 import { generateMetadata as generateSEOMetadata, SITE_CONFIG } from "@/lib/seo";
+import { IntegrationsSection } from "@/components/website/Integrations";
+import AlertdeckBanner from "@/components/alertdeckbanner";
 
 export const metadata: Metadata = generateSEOMetadata({
   title: "Features - AI-Powered Incident Management & Automated Response",
@@ -31,9 +33,11 @@ export default function FeaturesPage() {
     return (
         <div>
             <HeroHeader />
-            <FeaturesSection2 />
+            <FeaturesHeader />
+            <AlertdeckBanner />
+            <IntegrationsSection />
             <Features />
-            <Features3 />
+            {/* <Features3 /> */}
             <CTA />
             <Footer />
         </div>

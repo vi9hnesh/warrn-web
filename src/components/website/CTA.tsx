@@ -15,7 +15,7 @@ const CTASection: React.FC = () => {
     <section className="bg-black">
       <div className="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:py-28 lg:px-8">
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-light tracking-tight text-white mb-4">
           Let us help you deliver excellence
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
@@ -36,7 +36,7 @@ const CTASection: React.FC = () => {
                     size="lg"
                     className='bg-white text-black hover:bg-gray-200 lg:inline-flex  rounded-2xl'>
                     <Link href="https://app.warrn.io/sign-up">
-                        <span>Start Now, It's Free</span>
+                        <span>Start Now</span>
                     </Link>
                 </Button>
             </div>

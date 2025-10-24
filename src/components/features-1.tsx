@@ -1,91 +1,118 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
-import { AlertTriangle, Users, Settings2, MessageSquare } from 'lucide-react'
+import { ArchiveRestore, Video, Combine, HandPlatter, BookCheck, LibraryBig } from 'lucide-react'
 import { ReactNode } from 'react'
 
 export default function Features() {
     return (
-        <section className="bg-[#F6F6F6] py-16 md:py-32 dark:bg-transparent lg:m-22 lg:mt-28 border-none lg:rounded-3xl">
+        <section className="bg-[#F6F6F6] py-16 dark:bg-transparent lg:m-22 lg:mt-28 border-none lg:rounded-3xl">
             <div className="@container mx-auto max-w-5xl px-6">
                 <div className="text-center">
-                    <h2 className="text-balance text-4xl lg:text-5xl">Production-Ready Alert Management</h2>
-                    <p className="mt-4">Complete alert lifecycle management with advanced team organization and collaboration.</p>
+                    <p className="uppercase font-mono text-sm text-muted-foreground">Coming soon</p>
+                    <h2 className="mt-4 text-balance text-4xl lg:text-5xl">We are just getting started</h2>
                 </div>
                 <div className="@min-4xl:max-w-full @min-4xl:grid-cols-3 mx-auto mt-8 grid max-w-2xl gap-6 *:text-center md:mt-16">
-                    <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
-                        <CardHeader className="pb-3">
+                <Card className="group shadow-none border-none dark:bg-zinc-950 gap-2">
+                        <CardHeader>
                             <CardDecorator>
-                                <AlertTriangle
+                                <LibraryBig
                                     className="size-6"
                                     aria-hidden
                                 />
                             </CardDecorator>
 
-                            <h3 className="mt-6 font-medium">Comprehensive Alert Management</h3>
+                            <h3 className="font-medium">Spaces</h3>
                         </CardHeader>
 
-                        <CardContent>
-                            <p className="text-sm">Create, acknowledge, resolve with status tracking.</p>
+                        <CardContent className="text-sm text-muted-foreground">
+                            Spaces for your teams and projects.
+                        </CardContent>
+                    </Card>
+                    
+                    <Card className="group shadow-none border-none dark:bg-zinc-950 gap-2">
+                        <CardHeader>
+                            <CardDecorator>
+                                <BookCheck
+                                    className="size-6"
+                                    aria-hidden
+                                />
+                            </CardDecorator>
+
+                            <h3 className="font-medium">Tasks</h3>
+                        </CardHeader>
+
+                        <CardContent className="text-sm text-muted-foreground">
+                            You do not need epics and stories.
                         </CardContent>
                     </Card>
 
-                    <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
-                        <CardHeader className="pb-3">
+                    <Card className="group shadow-none border-none dark:bg-zinc-950 gap-2">
+                        <CardHeader>
                             <CardDecorator>
-                                <Users
+                                <Combine
                                     className="size-6"
                                     aria-hidden
                                 />
                             </CardDecorator>
 
-                            <h3 className="mt-6 font-medium">Team & Service Organization</h3>
+                            <h3 className="font-medium">Collectors</h3>
                         </CardHeader>
 
-                        <CardContent>
-                            <p className="mt-3 text-sm">Team management with service catalog to track ownership and responsibility mapping.</p>
+                        <CardContent className="text-sm text-muted-foreground">
+                            Plug and play collectors for your alert sources.
                         </CardContent>
                     </Card>
 
-                    <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
+                    <Card className="group shadow-none border-none dark:bg-zinc-950 gap-2">
                         <CardHeader className="pb-3">
                             <CardDecorator>
-                                <Settings2
+                                <ArchiveRestore
                                     className="size-6"
                                     aria-hidden
                                 />
                             </CardDecorator>
 
-                            <h3 className="mt-6 font-medium">Service Configuration</h3>
+                            <h3 className="font-medium">Recovery</h3>
                         </CardHeader>
 
-                        <CardContent>
-                            <p className="mt-3 text-sm">Track your complete technical stack in one organized inventory.</p>
+                        <CardContent className="text-sm text-muted-foreground">
+                            {/* BCP tool */}
+                            Recovery plans and BCP tools.
                         </CardContent>
                     </Card>
 
-                    {/* <Card className="group shadow-zinc-950/5 dark:bg-zinc-950">
-                        <CardHeader className="pb-3">
+                    <Card className="group shadow-none border-none dark:bg-zinc-950 gap-2">
+                        <CardHeader>
                             <CardDecorator>
-                                <MessageSquare
+                                <Video
                                     className="size-6"
                                     aria-hidden
                                 />
                             </CardDecorator>
 
-                            <h3 className="mt-6 font-medium">Team Collaboration</h3>
+                            <h3 className="font-medium">Meeting Rooms</h3>
                         </CardHeader>
 
-                        <CardContent>
-                            <p className="mt-3 text-sm">Rich comments and discussions on alerts. Foster team collaboration and knowledge sharing during incident response.</p>
+                        <CardContent className="text-sm text-muted-foreground">
+                            War-rooms and alert coordination spaces.
                         </CardContent>
-                    </Card> */}
-                </div>
-                
-                {/* Future features preview */}
-                <div className="mt-16 text-center">
-                    <p className="text-sm text-muted-foreground">
-                        <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
-                        In Development: Agentic Response, Status Pages, Heartbeats, Observability & More
-                    </p>
+                    </Card>
+
+                    <Card className="group shadow-none border-none dark:bg-zinc-950 gap-2">
+                        <CardHeader>
+                            <CardDecorator>
+                                <HandPlatter
+                                    className="size-6"
+                                    aria-hidden
+                                />
+                            </CardDecorator>
+
+                            <h3 className="font-medium">YARA</h3>
+                        </CardHeader>
+
+                        <CardContent className="text-sm text-muted-foreground">
+                            Yet Another Resource Abstractor
+                        </CardContent>
+                    </Card>
                 </div>
             </div>
         </section>

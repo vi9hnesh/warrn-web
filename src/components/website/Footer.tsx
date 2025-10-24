@@ -34,8 +34,8 @@ const links = [
         group: 'Company',
         items: [
             {
-                title: 'Warrn',
-                href: 'https://warrn.io',
+                title: 'Emphoni',
+                href: 'https://emphoni.com',
             },
             {
                 title: 'About',
